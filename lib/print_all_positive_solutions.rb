@@ -12,13 +12,16 @@ def print_all_positive_solutions
     end
   end
 
+  count = 0
   array.to_a.each do |a|
     array.to_a.each do |b|
       result = a * a * a + b * b * b
       pairs = h[result]
       pairs.each do |pair|
         puts "#{a}, #{b}, #{pair[0]}, #{pair[1]}"
+        count += 1
       end
     end
   end
+  puts count
 end
